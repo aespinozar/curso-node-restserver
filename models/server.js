@@ -6,6 +6,7 @@ class Server {
 
     constructor() {
         this.app = express();
+        //define el puesto
         this.port = process.env.PORT || 3000;
         this.usuariosPath = '/api/usuarios';
         //llamada a conectarDB
