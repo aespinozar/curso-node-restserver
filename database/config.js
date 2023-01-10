@@ -12,8 +12,8 @@ const dbConnection = async() => {
         console.log('La Base de datos esta en On Line');
         
     } catch (error) {
-        console.log(error);
-        throw new Error('Error al iniciar la Base de Datos');
+        console.log('Espinoza Robles: ' + error.message);
+        throw new Error('Error al iniciar la Base de Datos: ' + error.message);
         
     }
 
