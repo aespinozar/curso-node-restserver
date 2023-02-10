@@ -9,6 +9,7 @@ class Server {
         //define el puesto
         this.port = process.env.PORT || 3000;
         this.usuariosPath = '/api/usuarios';
+        this.authPath = '/api/auth'
         //llamada a conectarDB
         this.conectarDB();
         //Middelware
@@ -35,7 +36,8 @@ class Server {
     }
     
     routes() {
-        this.app.use(this.usuariosPath, require('../routes/usuarios'))
+        this.app.use(this.authPath, require('../routes/auth'));
+        this.app.use(this.usuariosPath, require('../routes/usuarios'));
     }
 
     listen() {
