@@ -56,7 +56,6 @@ const googleSignIn = async(req, res = response) => {
                 nombre,
                 correo,
                 password: ':P',
-                rol: 'USER_ROLE',
                 img,
                 google: true
             };
