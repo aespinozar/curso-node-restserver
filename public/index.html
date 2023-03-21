@@ -16,7 +16,7 @@
          data-callback="handleCredentialResponse">
       </div>
       <div class="g_id_signin"
-         data-type="standard"
+        data-type="standard"
          data-size="large"
          data-theme="outline"
          data-text="sign_in_with"
@@ -40,7 +40,7 @@
         function handleCredentialResponse(response) {
            // Google Token : ID_TOKEN
           // console.log('id_token',response.credential);
-          const body = {id_token:response.credential };
+          const body = {id_token: response.credential};
           fetch( url,{
             method: 'POST',
             headers: {
