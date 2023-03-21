@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google Sign In</title>
-    <meta name="google-signin-client_id" content="567616998134-1umirvaa3n3c7ca3bsusemqjod56aqd7.apps.googleusercontent.com">
+   
 </head>
 <body>
    <h1>Google Sign In</h1>
     <hr>
     <div id="g_id_onload"
-         data-client_id="567616998134-1umirvaa3n3c7ca3bsusemqjod56aqd7.apps.googleusercontent.com"
+         data-client_id="567616998134-1umirvaa3n3c7ca3bsusemqjod56aqd7.apps.googleusercontent.com"                   
          data-auto_prompt="false"
          data-callback="handleCredentialResponse">
       </div>
@@ -33,13 +33,13 @@
       console.log(window.location.hostname.includes('localhost'))
       var url = ( window.location.hostname.includes('localhost') )
                     ? 'http://localhost:8080/api/auth/google'
-                    : 'https://curso-node-restserver-production-c038.up.railway.app/api/auth/google';
-                  
+                    : 'https://curso-node-restserver-production-9a06.up.railway.app/api/auth/google';
+                 
         function handleCredentialResponse(response) {
            // Google Token : ID_TOKEN
           // console.log('id_token',response.credential);
           const body = {id_token:response.credential };
-          fetch(url,{
+          fetch( url,{
             method: 'POST',
             headers: {
                'Content-Type': 'application/json'
