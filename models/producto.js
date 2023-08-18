@@ -28,6 +28,7 @@ const ProductoSchema = Schema({
     },
     descripcion: {type:String},
     disponible: {type:Boolean, default:true},
+    img: {type:String},
 });
 //esta funcion quita los campos _v, estado y el resto de campos lo almacena en dato
 ProductoSchema.methods.toJSON = function(){
